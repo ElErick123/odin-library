@@ -12,15 +12,15 @@ const books = document.querySelectorAll(".book");
 
 let bookArray = [];
 
-function Book(title, author, pages, wasRead) {
-    if (!new.target) {
-        throw Error("You must use the 'new' operator to call the constructor");
+class Book {
+    id = crypto.randomUUID();
+
+    constructor(title, author, pages, wasRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.wasRead = wasRead;
     }
-    this.id = crypto.randomUUID();
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.wasRead = JSON.parse(wasRead);
 }
 
 function addBookToLibrary(title, author, pages, wasRead) {
