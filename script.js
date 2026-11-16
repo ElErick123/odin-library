@@ -21,6 +21,7 @@ class Book {
         this.pages = pages;
         this.wasRead = wasRead;
     }
+    
 }
 
 function addBookToLibrary(title, author, pages, wasRead) {
